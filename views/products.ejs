@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs")%>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <section id="products" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Our Products</h2>
+        <!-- Filter and Search -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <div class="input-group">
+              <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+              <div class="input-group-append">
+                <button class="btn btn-primary" id="searchBtn">Search</button>
+              </div>
+            </div>
+            <div id="suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></div>
+            <!-- Legend -->
+            <div class="mt-3">
+              <span class="border border-success border-1 rounded-pill px-3 py-1" style="display: inline-block;">Available</span>
+              <span class="border border-danger border-1 rounded-pill px-3 py-1 ml-3" style="display: inline-block;">Unavailable</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <select id="categorySelect" class="form-control" onchange="category(value)">
+              <option value="%">All Categories</option>
+              <option value="Coffee">Coffee</option>
+              <option value="Pastries">Pastries</option>
+              <option value="Sandwiches">Sandwiches</option>
+              <option value="Tea">Tea</option>
+              <option value="Cakes">Cakes</option>
+              <option value="Smoothies">Smoothies</option>
+            </select>
+            <select id="orderSelect" class="form-control mt-3" onchange="order(value)">
+              <option value="asc">Price: Low to High</option>
+              <option value="desc">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+        <!-- Product Cards -->
+        <div class="row d-flex align-items-stretch prod">
+          <!-- Product cards will be dynamically generated here -->
+        </div>
+      </div>
+    </section>
+    
+    <%- include("./partials/footer.ejs") %>
+    <script src="./js/products.js"></script>
+</body>
+</html>

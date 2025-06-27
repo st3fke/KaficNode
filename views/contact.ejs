@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs")%>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <section id="contact" class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="text-center mb-4">Contact Us</h2>
+                  <form action="/contact" method="post">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="name" name="firstname" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="bg-light py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Leave a Testimonial</h2>
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <form action="/testimonials" method="post">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="testimonial">Testimonial</label>
+                  <textarea class="form-control" id="testimonial" rows="4" placeholder="Write your testimonial" name="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
