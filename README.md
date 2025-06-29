@@ -17,7 +17,7 @@ Web aplikacija za prikaz artikala jednog kafića, razvijena u Node.js-u uz povez
 
 - **Backend:** Node.js + Express.js
 - **Baza podataka:** MySQL
-- **ORM/Query:** MySQL2 ili Sequelize (navedi konkretno)
+- **ORM/Query:** Sequelize
 - **Frontend:** HTML/CSS + EJS 
 - **Dodatno:** dotenv za konfiguraciju, nodemon za razvoj
 
